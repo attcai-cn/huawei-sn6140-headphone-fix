@@ -1,5 +1,6 @@
-# Huawei MateBook YTG-XXX (Conexant SN6140) — headphone jack fix
+# Huawei YTG-XXX / 擎云G540 Gen2 (Conexant SN6140) — headphone jack fix
 
+擎云G540 Gen2 耳机孔不识别修复补丁
 Headphone jack is silent / not detected on Linux. This directory contains both a
 ready-to-use workaround and a kernel patch suitable for upstream submission.
 
@@ -64,7 +65,7 @@ machine because its subsystem ID is `0x19e5:0x3e6d`.
 | `0002-...-pin-quirk-standalone.patch` | self-contained kernel patch for kernels without that commit |
 | `evidence/` | codec dump, mixer state and summary captured before the fix |
 
-## Workaround (no kernel rebuild)
+## Workaround (no kernel rebuild) 安装步骤
 
 ```sh
 sudo ./install.sh
@@ -79,7 +80,7 @@ same mechanism `hdajackretask` uses ("Early Patching" in the kernel docs).
 Note: the section name is `[hint]` (singular) per
 `Documentation/sound/hd-audio/notes.rst`. The kernel also accepts `[hints]`.
 
-### Verify after reboot
+### Verify after reboot 验证
 
 ```sh
 dmesg | grep hp_outs
@@ -95,7 +96,7 @@ pactl list sinks | grep -i headphone
 Then plug in headphones: the internal speaker should mute automatically and
 audio should come out of the headphones.
 
-### Roll back
+### Roll back 回退
 
 ```sh
 sudo ./uninstall.sh
