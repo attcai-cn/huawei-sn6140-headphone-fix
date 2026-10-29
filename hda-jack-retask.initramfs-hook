@@ -1,0 +1,14 @@
+#!/bin/sh
+# Include the HD-audio firmware patch in the initramfs, so it is available
+# when the codec is probed early during boot.
+PREREQ=""
+prereqs() { echo "$PREREQ"; }
+case "$1" in
+	prereqs)
+		prereqs
+		exit 0
+		;;
+esac
+
+. /usr/share/initramfs-tools/hook-functions
+copy_file firmware /lib/firmware/hda-jack-retask.fw

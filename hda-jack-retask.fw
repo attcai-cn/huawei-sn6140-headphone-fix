@@ -1,0 +1,8 @@
+[codec]
+0x14f11f87 0x19e53e6d 0
+
+[pincfg]
+0x18 0x03211020
+
+[hint]
+auto_mute = yes

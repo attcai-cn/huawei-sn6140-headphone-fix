@@ -1,0 +1,24 @@
+# 采集时间: 2026-10-29
+uname: Linux debian-hw 7.2.13-x64v3-xanmod1
+
+DMI:
+  sys_vendor      : HUAWEI
+  product_name    : YTG-XXX
+  product_version : M1010
+  board_name      : YTG-XXX-PCB
+
+codec:
+  Vendor Id    : 0x14f11f87 (Conexant SN6140)
+  Subsystem Id : 0x19e53e6d
+  Address      : 0
+
+pin 0x18:
+  Pincap      : 0x0001133c (IN OUT HP EAPD Detect)
+  Pin Default : 0x40f001f0 ([N/A] Other at Ext N/A)
+  Pin-ctls    : 0xc0 (OUT HP VREF_HIZ)
+  GET_PIN_SENSE with headphones plugged: 0x80000000 (presence)
+  GET_PIN_SENSE with nothing plugged  : 0x00000000
+
+dmesg:
+  snd_hda_codec_conexant ehdaudio0D0: autoconfig for SN6140: line_outs=1 (0x17/0x0/0x0/0x0/0x0) type:speaker
+  snd_hda_codec_conexant ehdaudio0D0:    hp_outs=0 (0x0/0x0/0x0/0x0/0x0)
