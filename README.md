@@ -1,6 +1,7 @@
 # Huawei YTG-XXX / 擎云G540 Gen2 (Conexant SN6140) — headphone jack fix
 
-擎云G540 Gen2 耳机孔不识别修复补丁
+擎云G540 Gen2 耳机孔在Linux下不识别修复补丁
+
 Headphone jack is silent / not detected on Linux. This directory contains both a
 ready-to-use workaround and a kernel patch suitable for upstream submission.
 
